@@ -1,4 +1,4 @@
-package com.foreverhappy.mall.web;
+package com.foreverhappy.mall.controller;
 
 import org.junit.Before;
 import org.junit.Test;
