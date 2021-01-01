@@ -3,13 +3,10 @@ package com.foreverhappy.mall.repository;
 import com.foreverhappy.mall.domain.UserDO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.domain.*;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
-import java.util.List;
 import java.util.Optional;
 
 /**
@@ -32,7 +29,6 @@ public class UserRepositoryTests {
         userDO.setUserName("liuyuchuan");
         userRepository.save(userDO);
 
-
         userDO.setId(null);
         userDO.setUserName("liuyuchuan");
         userRepository.save(userDO);
@@ -51,6 +47,11 @@ public class UserRepositoryTests {
 
         userDO.setId(null);
         userDO.setUserName("liuyuchuan4");
+        userRepository.save(userDO);
+
+
+        userDO.setId(null);
+        userDO.setUserName("liuyuchuan5");
         userRepository.save(userDO);
     }
 
@@ -91,8 +92,8 @@ public class UserRepositoryTests {
 //        Optional<UserDO> optional = userRepository.findUserNameById(7);
 //        optional.ifPresent(user -> System.out.println(user.getUserName()));
 
-        Sort.TypedSort<UserDO> sort = Sort.sort(UserDO.class);
-        Slice<UserDO> users = userRepository.findByUserName("liuyuchuan", PageRequest.of(0, 2, sort.by(UserDO::getId).descending()));
-        users.forEach((item) -> System.out.println(item.getId()));
+//        Sort.TypedSort<UserDO> sort = Sort.sort(UserDO.class);
+//        Slice<UserDO> users = userRepository.findByUserName("liuyuchuan", PageRequest.of(0, 2, sort.by(UserDO::getId).descending()));
+
     }
 }

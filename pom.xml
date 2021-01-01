@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.forever-happy</groupId>
     <artifactId>mall</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1.RELEASE</version>
     <name>forever-happy-mall</name>
     <description>Demo project for Spring Boot</description>
 
@@ -27,16 +27,17 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <version>1.18.14</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
         <dependency>
@@ -66,4 +67,10 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>huyuan-release</id>
+            <url>http://47.94.141.227:8081/repository/huyuan-release/</url>
+        </repository>
+    </distributionManagement>
 </project>
