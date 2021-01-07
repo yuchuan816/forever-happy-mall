@@ -9,3 +9,12 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
+
+swagger:
+  enabled: true
+  version: 1.9.1.RELEASE
+  title: 永乐商城
+  description: 永乐商城
+  contact:
+    name: 刘宇川
+  base-package: com.foreverhappy.mall
